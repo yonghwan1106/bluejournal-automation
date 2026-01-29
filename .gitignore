@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+venv/
+.venv/
+
+# Downloads
+downloads/
+*.hwp
+*.hwpx
+*.jpg
+*.png
+*.gif
+
+# Config with credentials (contains passwords)
+config.py
+
+# Results
+*.json
+
+# IDE
+.vscode/
+.idea/
