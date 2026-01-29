@@ -118,12 +118,20 @@ http://bluejournal.co.kr/adm/write.php?bo_table=news
 #### 6.2 필수 입력 항목
 | 항목 | 셀렉터 | 값 |
 |------|--------|-----|
+| **기자명** | `input[name="wr_name"]` | **"경인블루저널"** (필수) |
 | 출력위치 | checkbox (중앙섹션) | 체크 |
 | 1차 뉴스 섹션 | select | "지역뉴스" |
 | 2차 섹션 | select | "경기" |
 | 제목 | `input[name="wr_subject"]` | 기사 제목 |
 | 본문 | CKEditor iframe | 기사 내용 |
 | 대표이미지 | `input[name="wr_image"]` | 이미지 파일 |
+
+**⚠️ 중요: 모든 기사의 기자명(작성자)은 반드시 "경인블루저널"로 설정해야 함**
+
+```javascript
+// 기자명 설정
+document.querySelector('input[name="wr_name"]').value = '경인블루저널';
+```
 
 #### 6.3 본문 입력 (CKEditor)
 ```python
@@ -351,5 +359,6 @@ python main.py
 
 | 날짜 | 내용 |
 |------|------|
+| 2026-01-29 | 기자명(작성자) "경인블루저널" 고정 설정 추가 |
 | 2026-01-29 | 본문 이미지 삽입 방법 추가, 기자선택/출력위치 처리 방법 추가 |
 | 2026-01-29 | 최초 작성 - 수원시 보도자료 3건 업로드 완료 |
