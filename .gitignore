@@ -6,6 +6,11 @@ __pycache__/
 venv/
 .venv/
 
+# Environment
+.env
+.env.local
+.env.*.local
+
 # Downloads
 downloads/
 *.hwp
@@ -20,6 +25,14 @@ config.py
 # Results
 *.json
 
+# Logs
+*.log
+logs/
+
 # IDE
 .vscode/
 .idea/
+
+# OS
+.DS_Store
+Thumbs.db

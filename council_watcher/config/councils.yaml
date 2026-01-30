@@ -1,0 +1,137 @@
+# 의회별 설정 파일
+# 각 의회의 회의록 시스템 정보 및 크롤링 설정
+
+councils:
+  yongin:
+    name: "용인특례시의회"
+    base_url: "https://council.yongin.go.kr"
+    system_type: "standard"
+    is_active: true
+    endpoints:
+      recent: "/kr/minutes/late.do"
+      search: "/kr/minutes/session.do"
+      detail: "/kr/minutes/view.do"
+    selectors:
+      list_table: "table.board_list tbody tr"
+      title: "td.subject a"
+      date: "td:nth-child(4)"
+      detail_content: "div.view_content"
+      file_download: "a.file_download"
+    file_format: "hwp"
+
+  suwon:
+    name: "수원시의회"
+    base_url: "https://council.suwon.go.kr"
+    system_type: "standard"
+    is_active: true
+    endpoints:
+      recent: "/kr/minutes/late.do"
+      search: "/kr/minutes/session.do"
+      detail: "/kr/minutes/view.do"
+    selectors:
+      list_table: "table.board_list tbody tr"
+      title: "td.subject a"
+      date: "td:nth-child(4)"
+      detail_content: "div.view_content"
+    file_format: "hwp"
+
+  seongnam:
+    name: "성남시의회"
+    base_url: "https://council.seongnam.go.kr"
+    system_type: "standard"
+    is_active: true
+    endpoints:
+      recent: "/kr/minutes/late.do"
+      search: "/kr/minutes/session.do"
+      detail: "/kr/minutes/view.do"
+    selectors:
+      list_table: "table.board_list tbody tr"
+      title: "td.subject a"
+      date: "td:nth-child(4)"
+      detail_content: "div.view_content"
+    file_format: "hwp"
+
+  hwaseong:
+    name: "화성시의회"
+    base_url: "https://council.hscity.go.kr"
+    system_type: "standard"
+    is_active: true
+    endpoints:
+      recent: "/kr/minutes/late.do"
+      search: "/kr/minutes/session.do"
+      detail: "/kr/minutes/view.do"
+    selectors:
+      list_table: "table.board_list tbody tr"
+      title: "td.subject a"
+      date: "td:nth-child(4)"
+      detail_content: "div.view_content"
+    file_format: "hwp"
+
+  bucheon:
+    name: "부천시의회"
+    base_url: "https://council.bucheon.go.kr"
+    system_type: "standard"
+    is_active: true
+    endpoints:
+      recent: "/kr/minutes/late.do"
+      search: "/kr/minutes/session.do"
+      detail: "/kr/minutes/view.do"
+    selectors:
+      list_table: "table.board_list tbody tr"
+      title: "td.subject a"
+      date: "td:nth-child(4)"
+      detail_content: "div.view_content"
+    file_format: "hwp"
+
+  goyang:
+    name: "고양시의회"
+    base_url: "https://council.goyang.go.kr"
+    system_type: "standard"
+    is_active: true
+    endpoints:
+      recent: "/kr/minutes/late.do"
+      search: "/kr/minutes/session.do"
+      detail: "/kr/minutes/view.do"
+    selectors:
+      list_table: "table.board_list tbody tr"
+      title: "td.subject a"
+      date: "td:nth-child(4)"
+      detail_content: "div.view_content"
+    file_format: "hwp"
+
+  ansan:
+    name: "안산시의회"
+    base_url: "https://council.ansan.go.kr"
+    system_type: "standard"
+    is_active: true
+    endpoints:
+      recent: "/kr/minutes/late.do"
+      search: "/kr/minutes/session.do"
+      detail: "/kr/minutes/view.do"
+    selectors:
+      list_table: "table.board_list tbody tr"
+      title: "td.subject a"
+      date: "td:nth-child(4)"
+      detail_content: "div.view_content"
+    file_format: "hwp"
+
+  gg:
+    name: "경기도의회"
+    base_url: "https://kms.ggc.go.kr"
+    system_type: "kms"
+    is_active: true
+    endpoints:
+      recent: "/svc/cms/mnts/MntsLatelyList.do"
+      detail: "/cms/mntsViewer.do"
+      search: "/svc/cms/mnts/MntsRegularList.do"
+    selectors:
+      list_table: "table.tb_type01 tbody tr"
+      title: "td a"
+      date: "td:nth-child(3)"
+      detail_content: "div.view_content"
+    file_format: "html"  # KMS는 HTML 뷰어 방식
+
+# 시스템 타입 설명
+# - standard: 표준 지방의회 시스템 (대부분의 시군구)
+# - kms: 경기도의회 KMS 시스템
+# - ems: 전자회의시스템 (향후 확장)

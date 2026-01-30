@@ -1,0 +1,31 @@
+# FastAPI
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+python-multipart==0.0.9
+
+# Crawling
+playwright>=1.40.0
+beautifulsoup4==4.12.3
+lxml==5.2.2
+
+# HWP Processing
+olefile>=0.46
+pyhwpx==0.51.0
+
+# AI Analysis
+google-generativeai==0.8.0
+
+# Database
+httpx==0.27.2
+pydantic==2.9.2
+pydantic-settings==2.5.2
+
+# Scheduling
+apscheduler==3.10.4
+
+# Configuration
+pyyaml==6.0.2
+
+# Utilities
+python-dotenv==1.0.1
+aiofiles==24.1.0
