@@ -13,12 +13,12 @@
 ```python
 # Daum/Kakao 메일
 DAUM_EMAIL = "bluejournal@kakao.com"
-DAUM_PASSWORD = "Tsano3382!"
+DAUM_PASSWORD = "T*********"
 
 # NetPro CMS (경인블루저널)
 NETPRO_LOGIN_URL = "http://bluejournal.co.kr/bbs/login.php"
 NETPRO_ADMIN_ID = "admin"
-NETPRO_ADMIN_PW = "sano3382"
+NETPRO_ADMIN_PW = "********"
 NETPRO_NEWS_WRITE_URL = "http://bluejournal.co.kr/adm/write.php?bo_table=news"
 ```
 
